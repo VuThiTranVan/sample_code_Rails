@@ -6,7 +6,8 @@ class User < ApplicationRecord
   validates :email, presence: true, length: {maximum: Settings.user.email_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   has_secure_password
-  validates :password, presence: true, length: {minimum: Settings.user.password_length}
+  validates :password, presence: true, allow_nil: true,
+    length: {minimum: Settings.user.password_length}
 
   # Remembers a user in the database for use in persistent sessions.
   def remember

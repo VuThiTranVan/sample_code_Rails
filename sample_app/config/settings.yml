@@ -3,3 +3,6 @@ user:
   email_length: 255
   password_length: 6
   avata_size: 80
+  max_record_display: 5
+login:
+  remember_me: "1"
