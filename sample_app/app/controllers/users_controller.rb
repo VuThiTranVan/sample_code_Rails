@@ -58,6 +58,22 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def following
+    @title = t "users.flow_user.following"
+    load_user
+    @users = @user.following.paginate page: params[:page],
+      per_page: Settings.user.smax_record_display
+    render :show_follow
+  end
+
+  def followers
+    @title = t "users.flow_user.followers"
+    load_user
+    @users = @user.followers.paginate page: params[:page],
+      per_page: Settings.user.smax_record_display
+    render :show_follow
+  end
+
   private
 
   def user_params

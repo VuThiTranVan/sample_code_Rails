@@ -1,0 +1,6 @@
+<div data-no-turbolink="false">
+  <%= form_for current_user.active_relationships.find_by(followed_id: @user.id),
+    html: { method: :delete }, remote: true, data: { turbolinks: false }  do |f| %>
+    <%= f.submit t("users.flow_user.unfollow"), class: "btn" %>
+  <% end %>
+</div>
