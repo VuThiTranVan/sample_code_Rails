@@ -7,6 +7,11 @@ en:
       nav_home: "Home"
       nav_help: "Help"
       nav_login: "Log in"
+      nav_setting: "Settings"
+      nav_logout: "Log out"
+      nav_profile: "Profile"
+      nav_user: "Users"
+      nav_account: "Account"
     footer:
       para: "The"
       link_rail_tutorial: "Ruby on Rails Tutorial"
@@ -42,6 +47,15 @@ en:
       header: "About"
       para: "This is the sample application for the tutorial."
   users:
+    login:
+      title: "Log in"
+      header: "Log in"
+      frm_lbl_email: "Email"
+      frm_lbl_password: "Password"
+      frm_btn_login: "Log in"
+      link_register_user: "Sign up now!"
+      lbl_register_user: "New user? "
+      login_error_mgs: "Invalid email/password combination."
     new:
       title: "Sign up"
       header: "Sign up"
