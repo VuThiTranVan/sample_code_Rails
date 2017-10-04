@@ -70,6 +70,7 @@ en:
       frm_lbl_email: "Email"
       frm_lbl_password: "Password"
       frm_btn_login: "Log in"
+      frm_link_forgot_password: " (Forgot password) "
       link_register_user: "Sign up now!"
       lbl_register_user: "New user? "
       login_error_mgs: "Invalid email/password combination."
@@ -99,3 +100,31 @@ en:
       destroy_success: "User deleted"
       destroy_error: "User delete fail"
       link_delete: "Delete"
+
+    reset_password:
+      title: "Forgot password"
+      header: "Forgot password"
+      frm_btn_submit: "Submit"
+      subject_mail: "Reset password"
+      mailer:
+        header: "Password reset"
+        plaese_click_link: "To reset your password click the link below:"
+        reset_link: "Reset password"
+        content_para: "This link will expire in two hours."
+        content_para2: "If you did not request your password to be reset,
+           please ignore this email and your password will stay as it is."
+        content_mail:
+          txt_content_1: "To reset your password click the link below:"
+          txt_content_2: "This link will expire in two hours.
+            If you did not request your password to be reset,
+             please ignore this email and your password will stay as it is."
+      form_reset_new_password:
+        title: "Reset password"
+        header: "Reset password"
+        frm_btn_update_password: "Update new password"
+      flash:
+        email_not_found: "Email address not found"
+        intructions_msg: "Email sent with password reset instructions"
+        password_expired: "Password reset has expired."
+        password_not_empty: "can't be empty"
+        success_reset_password: "Password has been reset."
