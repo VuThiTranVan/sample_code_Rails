@@ -2,6 +2,19 @@ en:
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
+    header:
+      title: "sample app"
+      nav_home: "Home"
+      nav_help: "Help"
+      nav_login: "Log in"
+    footer:
+      para: "The"
+      link_rail_tutorial: "Ruby on Rails Tutorial"
+      para_by: "by"
+      link_author_rails: "Michael Hartl"
+      link_about: "About"
+      link_contact: "Contact"
+      link_new_rails: "News"
   static_pages:
     home:
       title: "Home"
@@ -9,6 +22,8 @@ en:
       para_1: "This is the home page for the"
       link: "Ruby on Rails Tutorial"
       para_2: "sample application."
+      sign_up: "Sign up now!"
+      rail_logo_alt: "Rails logo"
     help:
       title: "Help"
       header: "Help"
@@ -26,3 +41,8 @@ en:
       title: "About"
       header: "About"
       para: "This is the sample application for the tutorial."
+  users:
+    new:
+      title: "Sign up"
+      header: "Sign up"
+      para_1: "This will be a signup page for new users."
