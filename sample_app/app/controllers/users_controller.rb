@@ -7,15 +7,12 @@ class UsersController < ApplicationController
   # tuong duong voi before_action :load_user, only: [:show, :update, :edit, :destroy]
 
   def index
-    @users = User.paginate page: params[:page],
+    @users = User.where(activated: true).paginate page: params[:page],
       per_page: Settings.user.max_record_display
   end
 
   def show
-    # load_user # vi da co goi before action
-    return if @user
-    flash[:danger] = t "users.show.no_user_msg"
-    redirect_to signup_path
+    redirect_to root_path unless @user.activated?
   end
 
   def new
@@ -25,10 +22,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      # Login upon signup
-      log_in @user
-      flash[:success] = t "users.new.create_success"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "activation.please_check_email"
+      redirect_to root_path
     else
       render :new
     end

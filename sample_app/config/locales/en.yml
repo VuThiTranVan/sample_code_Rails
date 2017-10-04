@@ -1,4 +1,17 @@
 en:
+  activation:
+    please_check_email: "Please check your email to activate your account."
+    account_activated: "Account activated!"
+    invalid_activation_link: "Invalid activation link!"
+    warning_account_activation: "Account not activated. Check your email for the activation link."
+    app_name: "Sample app!"
+    mailer:
+      subject: "Account activation"
+      activate: "Activate"
+      welcome: "Welcome to the Sample App! Click on the link below to activate.
+        your account:"
+      hi: "Hi"
+
   layouts:
     application:
       title: "Ruby on Rails Tutorial Sample App"
@@ -86,5 +99,3 @@ en:
       destroy_success: "User deleted"
       destroy_error: "User delete fail"
       link_delete: "Delete"
-
-
