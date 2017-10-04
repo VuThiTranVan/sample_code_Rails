@@ -4,9 +4,16 @@ user:
   password_length: 6
   avata_size: 80
   max_record_display: 5
+  image_size: 50
 login:
   remember_me: "1"
 mailer:
   host: "localhost:3000"
 password_reset:
   time_expired: 1
+micropost:
+  content_length: 140
+  max_record_display: 5
+  image_size: 50
+image:
+  upload_micropost_size: 2
