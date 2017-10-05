@@ -1,0 +1,28 @@
+en:
+  layouts:
+    application:
+      title: "Ruby on Rails Tutorial Sample App"
+  static_pages:
+    home:
+      title: "Home"
+      header: "Sample App"
+      para_1: "This is the home page for the"
+      link: "Ruby on Rails Tutorial"
+      para_2: "sample application."
+    help:
+      title: "Help"
+      header: "Help"
+      para_1: "Get help on the Ruby on Rails Tutorial at the"
+      link_rail: "Rails Tutorial help section."
+      para_2: "To get help on this sample app, see the"
+      link_rail_tutorial: "Ruby on Rails Tutorial"
+      link_rail_tutorial_1: "book."
+    contact:
+      title: "Contact"
+      header: "Contact"
+      para: "Contact the Ruby on Rails Tutorial about the sample app at the"
+      link: "contact page"
+    about:
+      title: "About"
+      header: "About"
+      para: "This is the sample application for the tutorial."
