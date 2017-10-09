@@ -46,3 +46,12 @@ en:
       title: "Sign up"
       header: "Sign up"
       para_1: "This will be a signup page for new users."
+      frm_lbl_name: "User name"
+      frm_lbl_email: "Email"
+      frm_lbl_password: "Password"
+      frm_lbl_password_confirmation: "Password confirmation"
+      frm_btn_create: "Create account"
+      create_success: "Welcome to the Sample App!"
+      errors_msg: "The form contains %{count_error}."
+    show:
+      no_user_msg: "User does not exist. Please create a new user."
