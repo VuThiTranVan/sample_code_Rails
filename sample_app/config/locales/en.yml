@@ -56,6 +56,7 @@ en:
       link_register_user: "Sign up now!"
       lbl_register_user: "New user? "
       login_error_mgs: "Invalid email/password combination."
+      span_remember_me: "Remember me on this computer"
     new:
       title: "Sign up"
       header: "Sign up"
