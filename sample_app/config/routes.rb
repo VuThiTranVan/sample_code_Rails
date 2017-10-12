@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Setting the root route
+  root "static_pages#home"
+
   get "sessions/new"
 
   # The routes for the home and help actions in the Static Pages controller
@@ -13,9 +16,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
+  get "password_resets/new"
+  get "password_resets/edit"
+
   resources :users
   resources :account_activations, only: [:edit]
-
-  # Setting the root route
-  root "static_pages#home"
+  resources :password_resets, only: [:new, :create, :edit, :update]
 end

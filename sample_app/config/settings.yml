@@ -8,3 +8,5 @@ login:
   remember_me: "1"
 mailer:
   host: "localhost:3000"
+password_reset:
+  time_expired: 1
