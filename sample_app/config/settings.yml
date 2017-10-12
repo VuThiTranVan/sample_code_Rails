@@ -6,3 +6,5 @@ user:
   max_record_display: 5
 login:
   remember_me: "1"
+mailer:
+  host: "localhost:3000"
