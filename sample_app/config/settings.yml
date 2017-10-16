@@ -17,3 +17,4 @@ micropost:
   image_size: 50
 image:
   upload_micropost_size: 2
+gravata_size: 30

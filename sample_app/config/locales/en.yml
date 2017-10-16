@@ -131,6 +131,14 @@ en:
         password_expired: "Password reset has expired."
         password_not_empty: "can't be empty"
         success_reset_password: "Password has been reset."
+    flow_user:
+      following: "Following"
+      followers: "Followers"
+      follow: "Follow"
+      unfollow: "Unfollow"
+    show_follow:
+      profile: "view my profile"
+      post: "Microposts"
   micropost:
     user_profile: "View my profile"
     content_placeholder: "Compose new micropost..."
