@@ -39,3 +39,6 @@ db/seeds.rb
 
 # Ignore application configuration
 /config/application.yml
+
+# file log upload image
+/public/uploads/*

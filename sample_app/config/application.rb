@@ -7,5 +7,6 @@ Bundler.require(*Rails.groups)
 module SampleApp
   class Application < Rails::Application
     config.load_defaults 5.1
+    config.i18n.available_locales = [:en]
   end
 end

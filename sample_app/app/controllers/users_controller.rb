@@ -12,6 +12,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @microposts = @user.microposts.paginate page: params[:page],
+      per_page: Settings.micropost.max_record_display
+
     redirect_to root_path unless @user.activated?
   end
 
@@ -26,6 +29,7 @@ class UsersController < ApplicationController
       flash[:info] = t "activation.please_check_email"
       redirect_to root_path
     else
+      flash.now[:danger] = t "users.new.create_fail"
       render :new
     end
   end
@@ -36,9 +40,13 @@ class UsersController < ApplicationController
 
   def update
     # load_user
-    return render(:edit) unless @user.update_attributes user_params
-    flash[:success] = t "users.edit.edit_success"
-    redirect_to @user
+    if @user.update_attributes user_params
+      flash[:success] = t "users.edit.edit_success"
+      redirect_to @user
+    else
+      flash.now[:danger] = t "users.edit.update_error"
+      render :edit
+    end
   end
 
   def destroy
@@ -56,15 +64,6 @@ class UsersController < ApplicationController
     params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 
-  # Confirms a logged-in user.
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t "users.edit.required_login_msg"
-      redirect_to login_path
-    end
-  end
-
   # Confirms the correct user.
   def correct_user
     # @user = User.find_by id: params[:id]
@@ -80,6 +79,6 @@ class UsersController < ApplicationController
   # Loading user by id
   def load_user
     @user = User.find_by id: params[:id]
-    @user || render(file: "public/404.html", status: 404, layout: true)
+    valid_info @user
   end
 end

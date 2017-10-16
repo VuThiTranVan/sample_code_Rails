@@ -3,13 +3,14 @@ en:
     please_check_email: "Please check your email to activate your account."
     account_activated: "Account activated!"
     invalid_activation_link: "Invalid activation link!"
-    warning_account_activation: "Account not activated. Check your email for the activation link."
+    warning_account_activation: "Account not activated.
+       Check your email for the activation link."
     app_name: "Sample app!"
     mailer:
       subject: "Account activation"
       activate: "Activate"
       welcome: "Welcome to the Sample App! Click on the link below to activate.
-        your account:"
+         your account:"
       hi: "Hi"
 
   layouts:
@@ -81,6 +82,7 @@ en:
       para_1: "This will be a signup page for new users."
       frm_btn_create: "Create account"
       create_success: "Welcome to the Sample App!"
+      create_fail: "Register user fail."
       errors_msg: "The form contains %{count_error}."
     show:
       no_user_msg: "User does not exist. Please create a new user."
@@ -90,6 +92,7 @@ en:
       frm_btn_save: "Save changes"
       link_change_gravatar: "Change"
       edit_success: "Profile update successful."
+      update_error: "Profile update fail."
       required_login_msg: "Please log in."
     index:
       title: "All users"
@@ -116,7 +119,7 @@ en:
         content_mail:
           txt_content_1: "To reset your password click the link below:"
           txt_content_2: "This link will expire in two hours.
-            If you did not request your password to be reset,
+             If you did not request your password to be reset,
              please ignore this email and your password will stay as it is."
       form_reset_new_password:
         title: "Reset password"
@@ -128,3 +131,21 @@ en:
         password_expired: "Password reset has expired."
         password_not_empty: "can't be empty"
         success_reset_password: "Password has been reset."
+  micropost:
+    user_profile: "View my profile"
+    content_placeholder: "Compose new micropost..."
+    frm_btn_post: "Post"
+    micropost_feed: "Micropost Feed"
+    frm_btn_delete_micropost: "Delete"
+    confirm_when_delete_micropost: "You want to delete %{name_micropost}.
+       Are you sure?"
+    timestamp_micropost: "Posted %{time_post_ago} ago."
+    flash:
+      create_success: "Micropost created!"
+      create_waning: "Can  not create Micropost!"
+      delete_success: "Micropost deleted"
+      delete_error: "Micropost delete fails"
+      danger_image_upload_too_large_size: "should be less than %{size}MB.
+         Please choose a smaller file."
+      correct_user_to_delete_fails: "Delete micropost fails.
+         Because you not permisstion delete this micropost"
